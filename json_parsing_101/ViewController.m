@@ -118,7 +118,7 @@
     if (!cell)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        
+        [cell setBackgroundColor:[UIColor grayColor]];
     }
     cell.textLabel.text = [array objectAtIndex:indexPath.row];
     
