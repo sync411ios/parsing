@@ -120,7 +120,12 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         [cell setBackgroundColor:[UIColor grayColor]];
     }
-    cell.textLabel.text = [array objectAtIndex:indexPath.row];
+    
+    NSString *number = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    number = [number stringByAppendingString:[array objectAtIndex:indexPath.row]];
+              
+    
+    cell.textLabel.text = number;
     
     return cell;
 }
